@@ -1,0 +1,33 @@
+name: 'Generate settings.xml for Maven Builds'
+description: 'Create and customize ~/.m2/settings.xml'
+branding:
+  icon: feather
+  color: orange
+inputs:
+  servers:
+    description: 'json array of servers to add to settings.xml'
+    required: false
+  mirrors:
+    description: 'json array of mirrors to add to settings.xml'
+    required: false
+  repositories:
+    description: 'json array of repositories to add to settings.xml'
+    required: false
+  plugin_repositories:
+    description: 'json array of plugin repositories to add to settings.xml'
+    required: false
+  profiles:
+    description: 'json array of profiles to add to settings.xml'
+    required: false
+  plugin_groups:
+    description: 'json array of plugin groups to add to settings.xml'
+    required: false
+  active_profiles:
+    description: 'json array of profile ids to add to settings.xml'
+  proxies:
+    description: 'json array of proxies to add to settings.xml'
+  output_file:
+    description: 'path to generated file, default is .m2/settings.xml'
+runs:
+  using: 'node20'
+  main: 'dist/index.js'
