@@ -38,8 +38,8 @@
     "url": "https://github.com/step-security/maven-settings-xml-action.git"
   },
   "author": {
-    "name": "Zack Teater",
-    "url": "http://whelk.io"
+    "name": "step-security",
+    "url": "http://stepsecurity.io"
   },
   "license": "Apache-2.0",
   "bugs": {
