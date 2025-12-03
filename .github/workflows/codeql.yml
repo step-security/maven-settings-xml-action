@@ -57,9 +57,16 @@ jobs:
           # By default, queries listed here will override any specified in a config file.
           # Prefix the list here with "+" to use these queries and those in the config file.
 
-      # Autobuild attempts to build any compiled languages  (C/C++, C#, or Java).
-      # If this step fails, then you should remove it and run the build manually (see below)
+      # Build Java project manually since it's in a subdirectory
+      - name: Build Java project
+        if: matrix.language == 'java'
+        run: |
+          cd test/maven
+          ./mvnw clean compile test-compile
+
+      # Autobuild for other compiled languages (C/C++, C#, Go, etc.)
       - name: Autobuild
+        if: matrix.language != 'java'
         uses: github/codeql-action/autobuild@497990dfed22177a82ba1bbab381bc8f6d27058f # v3.31.6
 
       # ℹ️ Command-line programs to run using the OS shell.
