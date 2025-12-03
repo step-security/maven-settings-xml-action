@@ -6462,7 +6462,7 @@ function parse(source,defaultNSMapCopy,entityMap,domBuilder,errorHandler){
 				var config = parseStack.pop();
 				if(end<0){
 
-	        		tagName = source.substring(tagStart+2).replace(/[\s<].*/,'');
+	        		tagName = (source.substring(tagStart+2).match(/^[^\s<]+/) || [''])[0];
 	        		errorHandler.error("end tag name: "+tagName+' is not complete:'+config.tagName);
 	        		end = tagStart+1+tagName.length;
 	        	}else if(tagName.match(/\s</)){
