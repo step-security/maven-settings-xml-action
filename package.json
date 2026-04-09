@@ -30,7 +30,7 @@
     "build": "npm run build_index && npm run copy_templates"
   },
   "engines": {
-    "node": "20.x"
+    "node": ">=24"
   },
   "repository": {
     "type": "git",

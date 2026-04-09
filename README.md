@@ -1,3 +1,5 @@
+[![StepSecurity Maintained Action](https://raw.githubusercontent.com/step-security/maintained-actions-assets/main/assets/maintained-action-banner.png)](https://docs.stepsecurity.io/actions/stepsecurity-maintained-actions)
+
 # maven-settings-xml-action
 
 ![build-test](https://github.com/step-security/maven-settings-xml-action/workflows/build-test/badge.svg)
