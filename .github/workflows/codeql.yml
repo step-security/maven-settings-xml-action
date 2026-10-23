@@ -67,7 +67,7 @@ jobs:
       # Autobuild for other compiled languages (C/C++, C#, Go, etc.)
       - name: Autobuild
         if: matrix.language != 'java'
-        uses: github/codeql-action/autobuild@497990dfed22177a82ba1bbab381bc8f6d27058f # v3.31.6
+        uses: github/codeql-action/autobuild@6f2ac81f5cd81fe351a197ba0b00d91d03cd2aee # v4.39.0
 
       # ℹ️ Command-line programs to run using the OS shell.
       # 📚 See https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#jobsjob_idstepsrun
